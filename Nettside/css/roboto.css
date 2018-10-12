@@ -7,18 +7,16 @@ section {
     text-align: center;
 }
 
-/*section {
-    display: grid;
-    grid-auto-flow: column;
-    grid-gap: 5px;
-    
-}*/
-
 .grid-left {
     display: grid;
     justify-content: start;
     grid-auto-flow: column;
+    
 }
+/*.grid-left :nth-child(1){
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}*/
 
 .grid-center {
     display: grid;
@@ -29,15 +27,22 @@ section {
     display: grid;
     justify-content: end;
     grid-auto-flow: column;
-    padding-right: 2rem;
-    font-family: 'Roboto', serif;
-    font-weight: 500;
+    padding-right: 5rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
     text-transform: uppercase;
+    padding-top: 4px;
+}
+
+.grid-right #playfairdisplaylink img {
+    width: 30px;
+    height: auto;
+    opacity: 0.5;
 }
 
 .grid-right img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: auto;
 }
 
 header {
@@ -53,6 +58,7 @@ header {
     -moz-box-shadow: 0px 1px 1px #000000;
     box-shadow: 0px 1px 1px #000000;
     position: fixed;
+    transition: all 1s;
 }
 
 .menylinje {
@@ -68,6 +74,10 @@ header {
     font-size: 1rem;
 }
 
+.grid-left :hover {
+    color: lightgrey;
+}
+
 .menylinje a.logo {
     font-family: 'Muli', sans-serif;
     font-size: 1.5rem;
@@ -75,11 +85,33 @@ header {
     display: inline-block;
 }
 
+.midten {
+    height: 1rem;
+    width: 0.5rem;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+}
+
+.line-separator {
+    height: 1px;
+    width: 10rem;
+    background: #ffffff;
+}
+
 .line-separator1 {
     height: 1px;
     width: 1rem;
     margin: 1rem auto 2rem auto;
-    background-color: #ffffff;
+    background: #ffffff;
+    border-bottom: 1px #161616;
+}
+
+.line-separator2 {
+    height: 500px;
+    width: 1px;
+    margin: 3rem auto 0 auto;
+    background: #ffffff;
+    border-bottom: 1px #161616;
 }
 
 .line-separator3 {
@@ -100,10 +132,11 @@ header {
 
 h1 {
     color: white;
-    font-family: 'Playfair Display', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 900;
     text-align: center;
     margin-top: 3rem;
+    padding-bottom: 20px;
     font-size: 2rem;
 }
 
@@ -114,7 +147,8 @@ h2 {
     color: #ffffff;
     margin-bottom: 1rem;
     margin-top: 3rem;
-    font-family: 'Playfair Display', sans-serif;
+    font-family: 'roboto', sans-serif;
+    
 }
 
 h3 {
@@ -125,20 +159,21 @@ h3 {
 }
 
 p.navn {
-    font-family: 'Playfair Display', sans-serif;
+    font-family: 'roboto', sans-serif;
     font-weight: 300;
     font-style: italic;
     text-align: center;
+    line-height: 1.5rem;
     color: white;
     font-size: 1rem;
 }
 
-p.playfair_info {
+p.roboto_info {
     color: #ffffff;
-    font-family: 'Playfair Display', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     margin: 0 auto 4rem auto;
-    max-width: 500px;
+    width: 500px;
     line-height: 1.5;
     text-align: justify;
     text-align-last: center;
@@ -153,26 +188,12 @@ p.playfair_info {
     align-items: center;
 }
 
-.midten {
-    height: 1rem;
-    width: 0.5rem;
-    border-left: 1px solid #ffffff;
-    border-right: 1px solid #ffffff;
-}
-
-.line-separator {
-    height: 1px;
-    width: 10rem;
-    background-color: #ffffff;
-}
-
 .characters {
-    /*margin-bottom: 120px;*/
     text-align: center;
     color: #ffffff;
-    /*line-height: 10px;*/
-    font-family: 'Playfair Display', serif;
-    font-weight: 100;
+    line-height: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     font-size: 1.5rem;
 }
 
@@ -183,19 +204,91 @@ p.playfair_info {
 }
 
 .playfair .characters {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', serif;
 }
 
 .playfair p.navn, .playfair p.playfair_info {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', serif;
 }
 
 .charcaters p:nth-child(1) {
     text-transform: uppercase;
 }
 
+.characters {
+    text-align: left;
+    color: #ffffff;
+    line-height: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
 #section2, #section3, #section4 {
-    padding-top: 100px;
+    padding-top: 50px;
+}
+
+.scrolling {
+    text-align: center;
+    color: #ffffff;
+    line-height: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    padding-bottom: 30px;
+}
+
+.scrolling p:nth-child(1) {
+    font-weight: 100;
+}
+
+.scrolling p:nth-child(2) {
+    font-weight: 100;
+    font-style: italic;
+}
+
+.scrolling p:nth-child(3) {
+    font-weight: 300;
+}
+
+.scrolling p:nth-child(4) {
+    font-weight: 300;
+    font-style: italic;
+}
+
+.scrolling p:nth-child(5) {
+    font-weight: 400;
+}
+
+.scrolling p:nth-child(6) {
+    font-weight: 400;
+    font-style: italic;
+}
+
+.scrolling p:nth-child(7) {
+    font-weight: 500;
+}
+
+.scrolling p:nth-child(8) {
+    font-weight: 500;
+    font-style: italic;
+}
+
+.scrolling p:nth-child(9) {
+    font-weight: 700;
+}
+
+.scrolling p:nth-child(10) {
+    font-weight: 700;
+    font-style: italic;
+}
+
+.scrolling p:nth-child(11) {
+    font-weight: 900;
+}
+
+.scrolling p:nth-child(12) {
+    font-weight: 900;
+    font-style: italic;
 }
 
 #majuskler, #minuskler, #tall {
@@ -218,49 +311,13 @@ p.playfair_info {
     grid-gap: 1px;
 }
 
-.scrolling {
-    text-align: center;
-    color: #ffffff;
-    line-height: 15px;
-    font-family: 'Playfair Display', sans-serif;
-    padding-bottom: 50px;
-    font-size: 1.7rem;
-}
-
-.scrolling p:nth-child(1) {
-    font-weight: 400;
-}
-
-.scrolling p:nth-child(2) {
-    font-weight: 400;
-    font-style: italic;
-}
-
-.scrolling p:nth-child(3) {
-    font-weight: 700;
-}
-
-.scrolling p:nth-child(4) {
-    font-weight: 700;
-    font-style: italic;
-}
-
-.scrolling p:nth-child(5) {
-    font-weight: 900;
-}
-
-.scrolling p:nth-child(6) {
-    font-weight: 900;
-    font-style: italic;
-}
-
 #quote {
     position: relative;
 }
 
 .lastwords p {
     font-size: 150px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 900;
     text-align: right;
     margin: 0 auto 0 50px;
@@ -271,31 +328,45 @@ p.playfair_info {
 }
 
 .quotetext p:nth-child(1) {
-    font-size: 2rem;
-    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
     text-align-last: left;
-    font-style: italic;
+   
     position: absolute;
-    top: 250px;
-    left: 45%;
+    top: 200px;
+    left: 43%;
 }
 
 .quotetext p:nth-child(2) {
-    font-size: 2rem;
-    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
     text-align-last: left;
     font-style: italic;
     position: absolute;
-    top: 360px;
-    left: 45%;
+    top: 300px;
+    left: 50%;
 }
 
 .quotetext p:nth-child(3) {
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-align-last: left;
+    font-style: italic;
+    position: absolute;
+    top: 400px;
+    left: 55%;
+}
+
+.quotetext p:nth-child(4) {
     font-size: 1rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
     text-align-last: left;
     position: absolute;
-    top: 550px;
+    top: 500px;
     left: 65%;
 }
 
@@ -317,22 +388,36 @@ p.playfair_info {
     display: inline-block;
 }
 
-@media (max-width: 640px) {
-    .grid-left {
+@media (max-width: 1040px) {
+    .grid-left :nth-child(2) {
         display: none;
+    }
+    .grid-left :nth-child(3) {
+        display: none;
+    }
+    .grid-left :nth-child(4) {
+        display: none;
+    }
+    .grid-left :nth-child(5) {
+        display: none;
+    }
+    .grid-right {
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .menylinje a {
+        font-size: 0.8rem;
     }
     .menylinje a.logo {
         font-size: 1rem;
     }
+    p.roboto_info {
+        width: 280px;
+    }
     .grid-center {
-        display: grid;
         justify-content: left;
-    }
-    .grid-right {
-        padding-left: 25px;
-    }
-    p.playfair_info {
-        max-width: 300px;
     }
     .line-separator {
         width: 6rem;
@@ -353,22 +438,27 @@ p.playfair_info {
     }
     .lastwords p {
         font-size: 100px;
-        top: 50px;
+        top: 140px;
         left: 1px;
     }
     .quotetext p:nth-child(1) {
-        font-size: 1.7rem;
-        top: 100px;
-        left: 20%;
+        font-size: 2.5rem;
+        top: 190px;
+        left: 30%;
     }
     .quotetext p:nth-child(2) {
-        font-size: 1.7rem;
-        top: 200px;
-        left: 20%;
+        font-size: 2rem;
+        top: 260px;
+        left: 50%;
     }
     .quotetext p:nth-child(3) {
+        font-size: 1.5rem;
+        top: 320px;
+        left: 62%;
+    }
+    .quotetext p:nth-child(4) {
         font-size: 1rem;
-        top: 330px;
+        top: 390px;
         left: 65%;
     }
 }
